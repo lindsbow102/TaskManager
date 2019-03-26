@@ -1,15 +1,57 @@
+body {
+    background-image: url("/assets/img/background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: darkslategray;
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 1.1rem;
+}
+
+#title {
+    font-size: 4rem;
+    text-align: center;
+    width: 70%;
+    margin: 0 15%;
+}
+
 #task-lists {
     display: flex;
     justify-content: space-evenly;
+    width: 100%;
+}
+hr {
+    width: 90%;
+}
+
+button {
+    background-color: navy;
+    border: none;
+    border-radius: 5px;
+    color: whitesmoke;
+    padding: .6rem;
 }
 
 #incomplete {
     float: left;
+}
+
+#incomplete, #complete {
+    background-color: rgb(219, 217, 217);
+    border: 1px solid darkslategray;
+    box-shadow: .3rem .3rem .3rem darkslategray;
+    margin-top: 1rem;
+    width: 45%;
+}
+
+#incomplete, #complete > h1 {
     text-align: center;
 }
 
-#complete {
-    text-align: center;
+.space-between {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5% 0 0;
 }
 
 h2 {
@@ -22,4 +64,9 @@ h2 {
     display: flex;
     justify-content: center;
     margin-top: 2rem;
+}
+
+input {
+    border: 1px solid darkslategray;
+    height: 2rem;
 }

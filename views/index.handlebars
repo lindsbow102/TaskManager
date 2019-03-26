@@ -1,14 +1,15 @@
+<h1 id="title">Task Manager</h1>
 <div id="task-lists">
     <div id="incomplete">
-        <h1>Tasks that are not completed!</h1>
+        <h1>Tasks to accomplish!</h1>
         <hr>
 
         <ul>
             {{#each tasks}}
             {{#unless completed}}
-            <h4>
-                <span>{{this.task_name}} <button class="complete" data-id="{{this.id}}">Complete Task!</button></span>
-            </h4>
+            <h3>
+                <span class="space-between">{{this.task_name}} <button class="complete" data-id="{{this.id}}">Done &#10004;</button></span>
+            </h3>
 
             {{/unless}}
             {{/each}}
@@ -16,15 +17,15 @@
     </div>
 
     <div id="complete">
-        <h1>Tasks that are completed!</h1>
+        <h1>Complete tasks!</h1>
         <hr>
 
         <ul>
             {{#each tasks}}
             {{#if completed}}
-            <h4>
-                <span>{{this.task_name}} <button class="delete-me" data-id="{{this.id}}">X</button></span>
-            </h4>
+            <h3>
+                <span class="space-between">{{this.task_name}} <button class="delete-me" data-id="{{this.id}}">X</button></span>
+            </h3>
             {{/if}}
             {{/each}}
         </ul>
@@ -32,11 +33,11 @@
 
 </div>
 
-<h2>Add a Task!</h2>
+<h2>Submit a new task</h2>
 
 <div class="add-task">
     <form action="/tasks/create" class="create-form" method="POST">
-        <input type="text" name="task_name" value="" id="enter_text">
+        <input type="text" name="task_name" value="" placeholder="New Task">
         <button type="submit" id="text-enter-button">Submit</button>
     </form>
 </div>
