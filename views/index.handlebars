@@ -1,0 +1,19 @@
+<h2>Tasks that are not completed!</h2>
+
+<ul>
+  {{#each tasks}}
+    {{#unless completed}}
+      {{this.id}}: {{this.task_name}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Tasks that are completed!</h2>
+
+<ul>
+  {{#each tasks}}
+    {{#if completed}}
+      {{this.id}}: {{this.task_name}}
+    {{/if}}
+  {{/each}}
+</ul>
