@@ -1,38 +1,42 @@
 <div id="task-lists">
     <div id="incomplete">
-        <h2>Tasks that are not completed!</h2>
+        <h1>Tasks that are not completed!</h1>
+        <hr>
 
         <ul>
             {{#each tasks}}
             {{#unless completed}}
             <h4>
-                <span>{{this.id}}: {{this.task_name}} <button class="complete" data-id="{{this.id}}">Complete Task!</button></span>
+                <span>{{this.task_name}} <button class="complete" data-id="{{this.id}}">Complete Task!</button></span>
             </h4>
-                
+
             {{/unless}}
             {{/each}}
         </ul>
     </div>
 
     <div id="complete">
-        <h2>Tasks that are completed!</h2>
+        <h1>Tasks that are completed!</h1>
+        <hr>
 
-    <ul>
-        {{#each tasks}}
-        {{#if completed}}
-        <h4>
-            <span>{{this.id}}: {{this.task_name}} <button class="delete-me" data-id="{{this.id}}">X</button></span>
-        </h4>
-        {{/if}}
-        {{/each}}
-    </ul>
+        <ul>
+            {{#each tasks}}
+            {{#if completed}}
+            <h4>
+                <span>{{this.task_name}} <button class="delete-me" data-id="{{this.id}}">X</button></span>
+            </h4>
+            {{/if}}
+            {{/each}}
+        </ul>
     </div>
-    
+
 </div>
 
-<h2>Add a Task</h2>
+<h2>Add a Task!</h2>
 
-<form action="/tasks/create" class="create-form" method="POST">
-    <input type="text" name="task_name" value="" id="enter_text">
-    <button type="submit" id="text-enter-button">Submit</button>
-</form>
+<div class="add-task">
+    <form action="/tasks/create" class="create-form" method="POST">
+        <input type="text" name="task_name" value="" id="enter_text">
+        <button type="submit" id="text-enter-button">Submit</button>
+    </form>
+</div>

@@ -5,4 +5,21 @@
 
 #incomplete {
     float: left;
+    text-align: center;
+}
+
+#complete {
+    text-align: center;
+}
+
+h2 {
+    background-color: orangered;
+    margin: 1rem 25%;
+    text-align: center;
+    width: 50%;
+}
+.add-task {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
 }
