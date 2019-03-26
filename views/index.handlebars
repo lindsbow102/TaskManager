@@ -3,37 +3,37 @@
     <div id="incomplete">
         <h1>Tasks to accomplish!</h1>
         <hr>
+        {{#each tasks}}
+        {{#unless completed}}
 
-        <ul>
-            {{#each tasks}}
-            {{#unless completed}}
-            <h3>
-                <span class="space-between">{{this.task_name}} <button class="complete" data-id="{{this.id}}">Done &#10004;</button></span>
-            </h3>
+        <h3>
+            <span class="space-between">
+                {{this.task_name}}<button class="complete" data-id="{{this.id}}">&#10004;</button>
+            </span>
+        </h3>
 
-            {{/unless}}
-            {{/each}}
-        </ul>
+        {{/unless}}
+        {{/each}}
     </div>
 
     <div id="complete">
-        <h1>Complete tasks!</h1>
+        <h1>Completed tasks!</h1>
         <hr>
+        {{#each tasks}}
+        {{#if completed}}
+        <h3>
+            <span class="space-between">
+                {{this.task_name}}<button class="delete-me" data-id="{{this.id}}">X</button>
+            </span>
+        </h3>
 
-        <ul>
-            {{#each tasks}}
-            {{#if completed}}
-            <h3>
-                <span class="space-between">{{this.task_name}} <button class="delete-me" data-id="{{this.id}}">X</button></span>
-            </h3>
-            {{/if}}
-            {{/each}}
-        </ul>
+        {{/if}}
+        {{/each}}
     </div>
 
 </div>
 
-<h2>Submit a new task</h2>
+<h2>Submit new task</h2>
 
 <div class="add-task">
     <form action="/tasks/create" class="create-form" method="POST">
@@ -41,3 +41,8 @@
         <button type="submit" id="text-enter-button">Submit</button>
     </form>
 </div>
+
+<footer>
+    <p>Created by Lindsey Bowen | Copyright 2019</p>
+   
+</footer>

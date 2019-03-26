@@ -6,6 +6,7 @@ body {
     color: darkslategray;
     font-family: 'Shadows Into Light Two', cursive;
     font-size: 1.1rem;
+    position: relative;
 }
 
 #title {
@@ -25,11 +26,17 @@ hr {
 }
 
 button {
-    background-color: navy;
+    background-color: rgb(55, 48, 100);
     border: none;
     border-radius: 5px;
     color: whitesmoke;
     padding: .6rem;
+    text-transform: uppercase;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 #incomplete {
@@ -51,12 +58,14 @@ button {
 .space-between {
     display: flex;
     justify-content: space-between;
-    margin: 0 5% 0 0;
+    margin: 0 4%;
+    transition: all .3s;
 }
 
 h2 {
-    background-color: orangered;
-    margin: 1rem 25%;
+    background-color: rgb(223, 163, 114);
+    margin: 1.5rem 25%;
+    padding: .5rem;
     text-align: center;
     width: 50%;
 }
@@ -66,7 +75,27 @@ h2 {
     margin-top: 2rem;
 }
 
+form {
+    transition: all .3s;
+}
+
 input {
     border: 1px solid darkslategray;
     height: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+footer {
+    background-color: darkslategray;
+    border-top: 1px solid rgb(223, 163, 114);
+    color: whitesmoke;
+    height: 5%;
+    font-size: .7rem;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
 }
