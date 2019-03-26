@@ -1,0 +1,8 @@
+#task-lists {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#incomplete {
+    float: left;
+}

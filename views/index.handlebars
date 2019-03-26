@@ -1,22 +1,32 @@
-<h2>Tasks that are not completed!</h2>
+<div id="task-lists">
+    <div id="incomplete">
+        <h2>Tasks that are not completed!</h2>
 
-<ul>
-    {{#each tasks}}
-    {{#unless completed}}
-    {{this.id}}: {{this.task_name}}
-    {{/unless}}
-    {{/each}}
-</ul>
+        <ul>
+            {{#each tasks}}
+            {{#unless completed}}
+            <h4>
+                <span>{{this.id}}: {{this.task_name}} <button class="complete" data-id="{{this.id}}">Complete Task!</button></span>
+            </h4>
+                
+            {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
 
-<h2>Tasks that are completed!</h2>
+    <div id="complete">
+        <h2>Tasks that are completed!</h2>
 
-<ul>
-    {{#each tasks}}
-    {{#if completed}}
-    {{this.id}}: {{this.task_name}}
-    {{/if}}
-    {{/each}}
-</ul>
+    <ul>
+        {{#each tasks}}
+        {{#if completed}}
+        <h4>{{this.id}}: {{this.task_name}}</h4>
+        {{/if}}
+        {{/each}}
+    </ul>
+    </div>
+    
+</div>
 
 <h2>Add a Task</h2>
 
