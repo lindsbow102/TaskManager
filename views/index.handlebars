@@ -1,19 +1,26 @@
 <h2>Tasks that are not completed!</h2>
 
 <ul>
-  {{#each tasks}}
+    {{#each tasks}}
     {{#unless completed}}
-      {{this.id}}: {{this.task_name}}
+    {{this.id}}: {{this.task_name}}
     {{/unless}}
-  {{/each}}
+    {{/each}}
 </ul>
 
 <h2>Tasks that are completed!</h2>
 
 <ul>
-  {{#each tasks}}
+    {{#each tasks}}
     {{#if completed}}
-      {{this.id}}: {{this.task_name}}
+    {{this.id}}: {{this.task_name}}
     {{/if}}
-  {{/each}}
+    {{/each}}
 </ul>
+
+<h2>Add a Task</h2>
+
+<form action="/tasks/create" class="create-form" method="POST">
+    <input type="text" name="task_name" value="" id="enter_text">
+    <button type="submit" id="text-enter-button">Submit</button>
+</form>
