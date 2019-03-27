@@ -1,14 +1,18 @@
-<h1 id="title">Task Manager</h1>
+<div id="title">
+    <h1>Task Manager</h1>
+    <h3>"Just do it already"</h3>
+</div>
+
 <div id="task-lists">
     <div id="incomplete">
-        <h1>Tasks to accomplish!</h1>
+        <h1>To Do!</h1>
         <hr>
         {{#each tasks}}
         {{#unless completed}}
 
         <h3>
             <span class="space-between">
-                {{this.task_name}}<button class="complete" data-id="{{this.id}}">&#10004;</button>
+                {{this.task_name}}<button class="complete" data-id="{{this.id}}">Done!</button>
             </span>
         </h3>
 
@@ -17,7 +21,7 @@
     </div>
 
     <div id="complete">
-        <h1>Completed tasks!</h1>
+        <h1>All done!</h1>
         <hr>
         {{#each tasks}}
         {{#if completed}}
@@ -33,12 +37,10 @@
 
 </div>
 
-<h2>Submit new task</h2>
-
 <div class="add-task">
-    <form action="/tasks/create" class="create-form" method="POST">
-        <input type="text" name="task_name" value="" placeholder="New Task"><br>
-        <button type="submit" id="text-enter-button">Submit</button>
+    <form action="/tasks/create" class="create-form" method="POST">                
+        <input type="text" name="task_name" value="" placeholder="Enter new task">
+        <button type="submit" id="text-enter-button">Submit New Task</button>
     </form>
 </div>
 
