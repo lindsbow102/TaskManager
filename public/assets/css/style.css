@@ -128,33 +128,38 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-    #title {
-        width: 90%;
-        margin: 0 5%;
-    }
-
-    #title > h1 {
-        font-size: 3.5rem;
-    }
-
-    #title > h3 {
-        font-size: 2rem;
-        margin-top: -2rem;
-    }
-
-    form {
-      width: 90%;
-      margin: 0 5%;
-    }
-
-    form > input {
-        width: 90%;
-        margin: 0 5%;
-    }
-
-    form > button {
-      font-size: 1.5rem;
-      width: 90%;
-      margin: .5rem 5% 3rem 5%;
-    }
+  body {
+    background-attachment: fixed;
+    background-size: cover;
   }
+
+  #title {
+    width: 90%;
+    margin: 0 5%;
+  }
+
+  #title > h1 {
+    font-size: 3.5rem;
+  }
+
+  #title > h3 {
+    font-size: 2rem;
+    margin-top: -2rem;
+  }
+
+  form {
+    width: 90%;
+    margin: 0 5%;
+  }
+
+  form > input {
+    width: 90%;
+    margin: 0 5%;
+  }
+
+  form > button {
+    font-size: 1.5rem;
+    width: 90%;
+    margin: 0.5rem 5% 3rem 5%;
+  }
+}
