@@ -8,7 +8,7 @@ $(document).ready(function() {
         method: "PUT",
         url: "/tasks/" + task_id
       }).then(function(data) {
-        // reload page to display devoured burger in proper column
+        // reload page to display completed task in proper column
         location.reload();
       });  
     });
@@ -21,7 +21,7 @@ $(document).ready(function() {
           method: "DELETE",
           url: "/tasks/delete/" + task_id
         }).then(function(data) {
-          // reload page to display devoured burger in proper column
+          // reload page to empty out newly deleted task
           location.reload();
         });  
       });
